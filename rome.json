@@ -1,0 +1,22 @@
+{
+  "files": {
+    "ignore": ["dist/", "public/", "src/gsap/", "node_modules/"]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentSize": 2,
+    "lineWidth": 80,
+    "ignore": []
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded",
+      "trailingComma": "es5"
+    }
+  },
+  "linter": {
+    "enabled": false
+  }
+}

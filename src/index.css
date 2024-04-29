@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-floating {
+  @apply block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0;
+}
+.label-floating {
+  @apply peer-focus:font-medium absolute text-sm duration-300 transform -translate-y-7 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-7;
+}
+
+.mock-text {
+  @apply text-xl sm:text-5xl first-letter:text-2xl sm:first-letter:text-7xl font-extrabold absolute top-[25%] sm:top-[50%] translate-y-[-50%] transition-opacity duration-1000;
+}
+
+.carousel-item {
+  @apply absolute top-0 left-0 w-full h-full translate-x-[100%] opacity-0 duration-1000 ease-in-out;
+}
+
+.progress-bar-overlay {
+  @apply absolute w-full top-0 left-0 rounded-box bg-current h-28 opacity-10;
+}
+
+.progress-bar {
+  @apply absolute w-2 top-0 left-0 rounded-box h-28 opacity-20;
+}
+
+.progress-bar-active {
+  @apply absolute w-2 top-0 left-0 rounded-box bg-current h-28 opacity-30;
+  animation: progress 5s linear;
+}
+
+.zoom-cursor {
+  @apply w-14 h-14 transform;
+}
+
+@font-face {
+  font-family: "AsapBold";
+  src: url("../src/assets/fonts/Asap/static/Asap/Asap-ExtraBoldItalic.ttf");
+}
+@font-face {
+  font-family: "AsapRegular";
+  src: url("../src/assets/fonts/Asap/static/Asap/Asap-Regular.ttf");
+}
+@font-face {
+  font-family: "AsapApp";
+  src: url("../src/assets/fonts/Asap/static/Asap/Asap-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "AsapLocation";
+  src: url("../src/assets/fonts/Asap/static/Asap/Asap-SemiBold.ttf");
+}
+@font-face {
+  font-family: "AsapBoldT";
+  src: url("../src/assets/fonts/Asap/static/Asap/Asap-Bold.ttf");
+}
+
+.font-asap-menu {
+  font-family: "AsapBold";
+  text-transform: uppercase;
+}
+
+.font-asap-bold {
+  font-family: "AsapBoldT";
+  text-transform: uppercase;
+}
+
+.font-content {
+  font-family: "AsapRegular";
+}
+
+.font-app {
+  font-family: "AsapApp";
+}
+
+.font-current-location {
+  font-family: "AsapLocation";
+}
+
+[data-theme="light"] .btn-actions {
+  @apply bg-white border-gray-300 text-gray-500 hover:text-gray-800 hover:bg-inherit hover:border-gray-400;
+}
+
+.nav-link {
+  @apply p-4 card cursor-pointer bg-base-100 translate-x-[60%] stroke-primary fill-primary text-primary shadow-lg duration-200 shadow-primary/60;
+}
+.nav-link-mobile {
+  @apply p-2 -translate-y-5 card cursor-pointer bg-base-100 stroke-primary fill-primary text-primary shadow-lg duration-200 shadow-primary/60;
+}
+
+.nav-link-active {
+  @apply p-4 card cursor-pointer hover:scale-90 hover:bg-base-100 fill-none hover:stroke-primary hover:text-primary hover:shadow-xl stroke-current duration-200;
+}
+.nav-link-mobile-active {
+  @apply p-2 card cursor-pointer hover:scale-90 hover:bg-base-100 fill-none hover:stroke-primary hover:text-primary hover:shadow-xl stroke-current duration-200;
+}

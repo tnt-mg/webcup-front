@@ -1,0 +1,22 @@
+.container-wave {
+  .progressbar-container {
+    .progressbar-complete {
+      z-index: 2;
+      .progressbar-liquid {
+        z-index: 1;
+        animation: r 3000ms infinite cubic-bezier(0.5, 0.5, 0.5, 0.5);
+      }
+    }
+    .progress-bar {
+      z-index: 2;
+    }
+  }
+}
+@keyframes r {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}

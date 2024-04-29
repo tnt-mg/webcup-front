@@ -1,0 +1,92 @@
+.upload-button {
+  line-height: 20px;
+  & > svg {
+    display: block;
+    width: 132px;
+    height: 52px;
+    pointer-events: none;
+    margin: -4px -2px;
+    transition: fill 0.2s, transform 0.1s;
+    transform: translateZ(0);
+  }
+
+  &:active {
+    & > svg {
+      transform: scale(0.975) translateZ(0);
+    }
+  }
+
+  .default,
+  .success,
+  .failure {
+    top: 12px;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    z-index: 1;
+
+    & > div {
+      display: inline-block;
+      vertical-align: top;
+
+      & > div {
+        span {
+          display: inline-block;
+          vertical-align: top;
+          transform-origin: 50% 100%;
+          transform: translateZ(0);
+        }
+      }
+    }
+  }
+
+  .success, .failure {
+    svg {
+      width: 13px;
+      height: 10px;
+      fill: none;
+      stroke: currentColor;
+      strokelinejoin: round;
+      strokelinecap: round;
+      strokewidth: 2;
+      display: inline-block;
+      vertical-align: top;
+      margin: 5px 4px 5px 0;
+      stroke-dasharray: 17px;
+      stroke-dashoffset: 17px;
+      transform: translateZ(0);
+    }
+
+    & > div {
+      & > div {
+        span {
+          opacity: 0;
+          transform: scale(0.25) translateZ(0);
+        }
+      }
+    }
+  }
+
+  .dots {
+    top: 19px;
+    bottom: 19px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    span {
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: currentColor;
+      margin: 0 3px;
+
+      transform: translateY(6px) scale(0);
+    }
+  }
+}

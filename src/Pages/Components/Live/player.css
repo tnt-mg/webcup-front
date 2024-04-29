@@ -1,0 +1,23 @@
+.agora-video-player > div {
+  border-radius: 0.5rem;
+}
+.agora-video-player {
+  /* left: 20%; */
+  height: 75%;
+  width: 45%;
+  position: absolute;
+}
+@media (max-width: 1400px) {
+  .agora-video-player {
+    left: 23%;
+    /* position: absolute; */
+  }
+}
+@media (max-width: 640px) {
+  .agora-video-player {
+    left: 0;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+  }
+}
