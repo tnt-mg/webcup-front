@@ -1,7 +1,8 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { confetti } from "tsparticles-confetti"
 
-export const useCongrats = () => {
+export const useCongrats = (emojis: Array<String> = ["🦄"]) => {
+  const [emoji, setEmoji] = useState<Array<String>>(emojis)
   const defaults = {
     spread: 360,
     ticks: 100,
@@ -27,18 +28,21 @@ export const useCongrats = () => {
       shapes: ["text"],
       shapeOptions: {
         text: {
-          value: ["🦄", "🌈"],
+          value: emoji,
         },
       },
     })
   }
+  const selectEmoji = (emoji: string) => {
+    setEmoji([emoji])
+  }
 
-  const congrats = () => {
+  const shoot = () => {
     setTimeout(configure, 0)
     setTimeout(configure, 100)
     setTimeout(configure, 200)
     setTimeout(configure, 500)
   }
 
-  return congrats
+  return [shoot, selectEmoji]
 }
