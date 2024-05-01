@@ -14,6 +14,7 @@ function Other() {
         </div>
         <CustomEmojiPicker />
         <CountdownCompo />
+        <CountdownCompo />
       </div>
     </AnimatedPage>
   )
