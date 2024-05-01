@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import { confetti } from "tsparticles-confetti"
 
-export const useCongrats = (emojis: Array<String> = ["🦄"]) => {
+const UseCongrats = (emojis: Array<String> = ["🦄"]) => {
   const [emoji, setEmoji] = useState<Array<String>>(emojis)
   const defaults = {
-    spread: 360,
+    spread: 160,
     ticks: 100,
     gravity: 0,
     decay: 0.94,
@@ -46,3 +46,5 @@ export const useCongrats = (emojis: Array<String> = ["🦄"]) => {
 
   return [shoot, selectEmoji]
 }
+
+export default UseCongrats

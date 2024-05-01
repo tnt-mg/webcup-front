@@ -1,8 +1,8 @@
 import AnimatedPage from "../../AnimatedPage"
+import CountdownCompo from "../Components/CountdownCompo"
 import CustomEmojiPicker from "../Components/Forms/emoji/CustomEmojiPicker"
 import TheVoice from "../Components/TheVoice"
 import LiveLineChart from "../Components/charts/LiveLineChart"
-import Functionnality from "../HomeSections/OnirixPresentation"
 
 function Other() {
   return (
@@ -13,7 +13,7 @@ function Other() {
           <LiveLineChart title="Data" />
         </div>
         <CustomEmojiPicker />
-        <section>{/* <Functionnality /> */}</section>
+        <CountdownCompo />
       </div>
     </AnimatedPage>
   )

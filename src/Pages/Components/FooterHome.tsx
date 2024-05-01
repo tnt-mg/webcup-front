@@ -1,5 +1,3 @@
-import { Link } from "react-scroll"
-import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import Banner from "../HomeSections/Banner"
 function FooterHome() {

@@ -12,7 +12,6 @@ import Layout from "./Layout"
 import LayoutAdmin from "./LayoutAdmin"
 import Comments from "./Pages/Admin/Comments"
 import Message from "./Pages/Admin/Message/Message"
-import { crudRoutes } from "./Pages/Admin/crudRoutes"
 import { SongIcon } from "./Pages/Components/Icons/SongIcon"
 import { ProtectedRoute } from "./utils/ProtectedRoute"
 import "xtendui"
@@ -138,17 +137,6 @@ function App() {
                   <Route path="video" element={<VideoCreatorExported />} />
                   <Route path="video/create/:id" element={<VideoCreator />} />
                   <Route path="tendances" element={<Timeline />} />
-                  {crudRoutes.map((route, index) => {
-                    const { path, element } = route
-                    const Element = element
-                    return (
-                      <Route
-                        key={`${path}-${index}`}
-                        path={path}
-                        element={<Element />}
-                      />
-                    )
-                  })}
                 </Route>
               </Routes>
             </Suspense>
